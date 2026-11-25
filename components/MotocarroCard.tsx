@@ -20,12 +20,12 @@ export default function MotocarroCard({
   motocarro: Motocarro;
 }) {
   return (
-    <article className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+    <article className="group overflow-hidden rounded-lg border border-slate-200 bg-white transition-colors hover:border-slate-300">
       <Link
         href={`/motocargueros/${motocarro.slug}`}
         className="block"
       >
-        <div className="relative flex h-64 items-center justify-center overflow-hidden bg-gray-100">
+        <div className="relative flex h-64 items-center justify-center overflow-hidden bg-slate-50">
           {motocarro.image ? (
             <img
               src={motocarro.image}
@@ -35,9 +35,8 @@ export default function MotocarroCard({
             />
           ) : (
             <div className="flex flex-col items-center justify-center text-center">
-              <div className="text-6xl">🚚</div>
-              <p className="mt-3 text-sm font-medium text-gray-400">
-                Imagen próximamente
+              <p className="text-xs font-medium uppercase tracking-wide text-slate-400">
+                Imagen no disponible
               </p>
             </div>
           )}
@@ -49,7 +48,7 @@ export default function MotocarroCard({
       </Link>
 
       <div className="p-5">
-        <p className="text-xs font-semibold uppercase tracking-wider text-blue-600">
+        <p className="text-xs font-semibold uppercase tracking-wider text-amber-800">
           Motocarguero
         </p>
 
@@ -125,7 +124,7 @@ export default function MotocarroCard({
 
         <Link
           href={`/motocargueros/${motocarro.slug}`}
-          className="mt-5 block rounded-xl bg-blue-600 px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-blue-700"
+          className="mt-5 block rounded-md bg-[#172b3d] px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-[#243f55]"
         >
           Ver ficha técnica
         </Link>

@@ -1,105 +1,40 @@
 export const companyInfo = {
+  name: "Andina Motor",
+  descriptor: "Repuestos y vehículos de trabajo",
   hero: {
-    eyebrow: "Sobre nosotros",
-    title: "Especialistas en repuestos para motocargueros",
+    eyebrow: "Repuestos · Motocargueros · Motos",
+    title: "Respaldo para cada kilómetro de trabajo.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Integer vitae turpis vel neque consequat elementum.",
+      "En Andina Motor reunimos repuestos, motocicletas y motocargueros en un solo lugar. Consulta el catálogo y encuentra información clara para elegir con confianza.",
   },
-
   history: {
-    title: "Una empresa construida con experiencia y compromiso",
+    title: "Un negocio especializado en movilidad y trabajo.",
     paragraphs: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo, sapien non consequat consequat, justo mauris faucibus lectus, vitae consequat ipsum lorem sed turpis.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod, nisl vel tincidunt consequat, augue erat elementum ipsum, vitae tincidunt massa sem sed neque.",
+      "Andina Motor es una empresa colombiana especializada en repuestos y vehículos de trabajo. Reunimos en un solo catálogo productos para mantenimiento, transporte y movilidad diaria.",
+      "Nuestro catálogo reúne referencias para mantenimiento, además de motocicletas y motocargueros de distintas marcas. Cada ficha presenta la información disponible para facilitar la comparación.",
+      "Creemos que una buena atención empieza por escuchar, orientar con claridad y ayudar a identificar la pieza adecuada para cada vehículo.",
     ],
   },
-
   current: {
-    title: "Una empresa preparada para seguir creciendo",
+    title: "Una tienda pensada para resolver, no complicar.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt, neque sed facilisis consequat, justo mauris vulputate augue, at tincidunt lorem ipsum vel neque.",
+      "Organizamos la oferta por tipo de producto y categoría para que puedas revisar especificaciones, consultar disponibilidad y avanzar a tu ritmo.",
   },
-
-  stats: [
+  values: [
     {
-      number: "+20",
-      label: "Años de experiencia",
+      number: "01",
+      title: "Catálogo especializado",
+      description: "Repuestos para motocicletas y vehículos de trabajo.",
     },
     {
-      number: "+1.000",
-      label: "Referencias",
+      number: "02",
+      title: "Información útil",
+      description: "Referencias y especificaciones presentadas con claridad.",
     },
     {
-      number: "4",
-      label: "Sedes",
-    },
-    {
-      number: "+50",
-      label: "Marcas y líneas",
+      number: "03",
+      title: "Atención cercana",
+      description: "Orientación para encontrar el producto que necesitas.",
     },
   ],
 };
-
-export const branches = [
-  {
-    name: "Sede Principal",
-    city: "Bogotá",
-    address: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    phone: "+57 300 000 0000",
-    whatsapp: "+57 300 000 0000",
-    email: "sedeprincipal@empresa.com",
-  },
-  {
-    name: "Sede Norte",
-    city: "Medellín",
-    address: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    phone: "+57 301 000 0000",
-    whatsapp: "+57 301 000 0000",
-    email: "medellin@empresa.com",
-  },
-  {
-    name: "Sede Centro",
-    city: "Cali",
-    address: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    phone: "+57 302 000 0000",
-    whatsapp: "+57 302 000 0000",
-    email: "cali@empresa.com",
-  },
-  {
-    name: "Sede Oriente",
-    city: "Bucaramanga",
-    address: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    phone: "+57 303 000 0000",
-    whatsapp: "+57 303 000 0000",
-    email: "bucaramanga@empresa.com",
-  },
-];
-
-export const galleryImages = [
-  {
-    src: "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=1200&q=80",
-    alt: "Instalaciones de la empresa",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=1200&q=80",
-    alt: "Almacén de repuestos",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1632823471565-1ecdf5c3d2b1?auto=format&fit=crop&w=1200&q=80",
-    alt: "Repuestos para vehículos",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80",
-    alt: "Productos automotrices",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1200&q=80",
-    alt: "Repuestos y herramientas",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=1200&q=80",
-    alt: "Operaciones de la empresa",
-  },
-];
-

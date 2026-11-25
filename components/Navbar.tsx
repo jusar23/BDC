@@ -45,17 +45,17 @@ export default function Navbar() {
             onClick={closeMenu}
             className="flex min-w-0 shrink-0 items-center gap-2"
           >
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-blue-700 text-xl shadow-sm sm:h-11 sm:w-11">
-              🚚
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-amber-500 text-base font-black tracking-tight text-slate-950 shadow-sm sm:h-11 sm:w-11">
+              AM
             </div>
 
             <div className="min-w-0">
               <p className="truncate text-sm font-extrabold leading-tight text-gray-900 sm:text-lg">
-                Repuestos
+                Andina Motor
               </p>
 
               <p className="hidden text-[11px] leading-tight text-gray-500 sm:block">
-                Tu tienda de confianza
+                Repuestos y vehículos
               </p>
             </div>
           </Link>

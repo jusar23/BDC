@@ -24,14 +24,11 @@ export default function ImageGallery({
   if (validImages.length === 0) {
     return (
       <div className="flex min-h-[320px] flex-col items-center justify-center rounded-2xl bg-gray-100 p-8 text-center">
-        <span className="text-7xl" aria-hidden="true">
-          🏍️
-        </span>
-        <p className="mt-4 font-semibold text-gray-700">
-          Imágenes próximamente
+        <p className="font-semibold text-gray-700">
+          Galería no disponible
         </p>
         <p className="mt-1 text-sm text-gray-500">
-          Las fotografías de este modelo estarán disponibles pronto.
+          No hay imágenes adicionales para este modelo.
         </p>
       </div>
     );

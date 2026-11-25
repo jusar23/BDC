@@ -6,9 +6,9 @@ import { CartProvider } from "@/components/cart/CartProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Repuestos",
+  title: "Andina Motor | Repuestos y vehículos de trabajo",
   description:
-    "Tienda de repuestos para motos y motocargueros.",
+    "Catálogo de repuestos, motocicletas y motocargueros. Consulta referencias y especificaciones en Andina Motor.",
 };
 
 export default function RootLayout({

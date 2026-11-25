@@ -4,38 +4,38 @@ const categories = [
   {
     name: "Motor",
     description: "Repuestos para motor",
-    icon: "⚙️",
+    icon: "01",
   },
   {
     name: "Frenos",
     description: "Pastillas, discos y más",
-    icon: "🛞",
+    icon: "02",
   },
   {
     name: "Transmisión",
     description: "Embragues y transmisión",
-    icon: "🔧",
+    icon: "03",
   },
   {
     name: "Suspensión",
     description: "Amortiguadores y piezas",
-    icon: "🔩",
+    icon: "04",
   },
   {
     name: "Eléctrico",
     description: "Baterías y componentes",
-    icon: "⚡",
+    icon: "05",
   },
   {
     name: "Accesorios",
     description: "Accesorios para tu vehículo",
-    icon: "🧰",
+    icon: "06",
   },
 ];
 
 export default function CategorySection() {
   return (
-    <section className="bg-white px-6 py-12">
+    <section className="border-b border-slate-200 bg-white px-6 py-12">
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
           {categories.map((category) => (
@@ -44,17 +44,17 @@ export default function CategorySection() {
               href={`/repuestos?categoria=${encodeURIComponent(
                 category.name
               )}`}
-              className="group rounded-2xl border border-gray-200 bg-gray-50 p-5 text-center transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:bg-blue-50 hover:shadow-md"
+              className="group rounded-md border border-slate-200 bg-white p-5 text-left transition-colors hover:border-amber-500 hover:bg-amber-50/40"
             >
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-white text-3xl shadow-sm transition duration-300 group-hover:scale-110">
+              <div className="flex h-8 w-8 items-center justify-center rounded bg-amber-100 text-xs font-semibold text-amber-800">
                 {category.icon}
               </div>
 
-              <h3 className="mt-4 text-base font-bold text-gray-900 group-hover:text-blue-600">
+              <h3 className="mt-4 text-sm font-semibold text-slate-900 group-hover:text-amber-800">
                 {category.name}
               </h3>
 
-              <p className="mt-1 text-xs leading-5 text-gray-500">
+              <p className="mt-1 text-xs leading-5 text-slate-500">
                 {category.description}
               </p>
             </Link>

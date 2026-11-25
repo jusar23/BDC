@@ -22,14 +22,14 @@ export default function ProductCard({
   const productUrl = `/productos/${product.slug}`;
 
   return (
-    <article className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+    <article className="group overflow-hidden rounded-lg border border-slate-200 bg-white transition-colors hover:border-slate-300">
       {/* Imagen principal */}
       <Link
         href={productUrl}
         className="block"
         aria-label={`Ver ${product.name}`}
       >
-        <div className="relative flex h-60 items-center justify-center overflow-hidden bg-gray-100">
+        <div className="relative flex h-60 items-center justify-center overflow-hidden bg-slate-50">
           {product.image?.trim() ? (
             <img
               src={product.image}
@@ -39,11 +39,8 @@ export default function ProductCard({
             />
           ) : (
             <div className="flex flex-col items-center justify-center text-center">
-              <span className="text-5xl" aria-hidden="true">
-                🔧
-              </span>
-              <p className="mt-2 text-sm text-gray-400">
-                Imagen próximamente
+              <p className="text-xs font-medium uppercase tracking-wide text-slate-400">
+                Imagen no disponible
               </p>
             </div>
           )}
@@ -56,7 +53,7 @@ export default function ProductCard({
 
       {/* Información del repuesto */}
       <div className="p-5">
-        <p className="text-sm font-medium text-blue-600">
+        <p className="text-xs font-semibold uppercase tracking-wide text-amber-800">
           {product.brand}
         </p>
 
@@ -95,7 +92,7 @@ export default function ProductCard({
 
         <Link
           href={productUrl}
-          className="mt-5 block rounded-xl bg-blue-600 px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-blue-700"
+          className="mt-5 block rounded-md bg-[#172b3d] px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-[#243f55]"
         >
           Ver producto
         </Link>

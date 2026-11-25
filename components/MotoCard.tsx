@@ -22,7 +22,7 @@ export default function MotoCard({ moto }: { moto: Moto }) {
         className="block"
         aria-label={`Ver detalles de ${moto.model}`}
       >
-        <div className="relative flex h-64 items-center justify-center overflow-hidden bg-gray-100">
+        <div className="relative flex h-64 items-center justify-center overflow-hidden bg-slate-50">
           {moto.image ? (
             <img
               src={moto.image}
@@ -37,14 +37,13 @@ export default function MotoCard({ moto }: { moto: Moto }) {
                 alt="Vento Motorcycles U.S.A."
                 className="mb-5 max-h-12 max-w-[190px] object-contain"
               />
-              <div className="text-6xl">🏍️</div>
-              <p className="mt-3 text-sm font-medium text-gray-500">
-                Imagen del modelo próximamente
+              <p className="mt-3 text-xs font-medium uppercase tracking-wide text-slate-400">
+                Imagen no disponible
               </p>
             </div>
           )}
 
-          <span className="absolute left-3 top-3 rounded-full bg-white px-3 py-1 text-xs font-bold uppercase tracking-wide text-[#17266F] shadow">
+          <span className="absolute left-3 top-3 rounded bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">
             Moto nueva
           </span>
         </div>
@@ -52,12 +51,12 @@ export default function MotoCard({ moto }: { moto: Moto }) {
 
       <div className="p-5">
         <div className="flex items-center justify-between gap-3">
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#17266F]">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber-800">
             Vento Motorcycles
           </p>
 
           {moto.warrantyYears && (
-            <span className="rounded-full bg-blue-50 px-2.5 py-1 text-xs font-semibold text-[#17266F]">
+            <span className="rounded bg-amber-50 px-2.5 py-1 text-xs font-semibold text-amber-900">
               {moto.warrantyYears} años de garantía*
             </span>
           )}
@@ -118,14 +117,14 @@ export default function MotoCard({ moto }: { moto: Moto }) {
 
         <Link
           href={`/motos/${moto.slug}`}
-          className="mt-5 block rounded-xl border border-[#17266F] px-4 py-3 text-center text-sm font-bold text-[#17266F] transition hover:bg-blue-50"
+          className="mt-5 block rounded-md border border-slate-300 px-4 py-3 text-center text-sm font-semibold text-slate-800 transition hover:border-amber-500 hover:bg-amber-50"
         >
           Ver ficha técnica
         </Link>
 
         <Link
           href={`/motos/${moto.slug}#contacto`}
-          className="mt-3 block rounded-xl bg-[#17266F] px-4 py-3 text-center text-sm font-bold text-white transition hover:bg-[#10194B]"
+          className="mt-3 block rounded-md bg-[#172b3d] px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-[#243f55]"
         >
           Contactar a un asesor
         </Link>

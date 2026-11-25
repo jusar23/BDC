@@ -57,14 +57,14 @@ export default async function RepuestosPage({
 
   return (
     <main className="min-h-screen bg-gray-50">
-      <section className="bg-gray-900 px-6 py-14">
+      <section className="bg-[#172b3d] px-6 py-14">
         <div className="mx-auto max-w-7xl">
-          <p className="text-sm font-bold uppercase tracking-wider text-blue-400">
-            Catálogo de repuestos
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber-400">
+            Andina Motor · Catálogo de repuestos
           </p>
 
           <h1 className="mt-2 text-3xl font-extrabold text-white sm:text-4xl">
-            Repuestos para tu vehículo
+            Repuestos para el trabajo y la movilidad diaria.
           </h1>
 
           <p className="mt-4 max-w-2xl text-sm leading-7 text-gray-300 sm:text-base">

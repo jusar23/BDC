@@ -63,14 +63,14 @@ export default async function MotocarguerosPage({
   return (
     <main className="min-h-screen bg-gray-50">
       {/* ENCABEZADO */}
-      <section className="bg-gray-900 px-6 py-16 text-white">
+      <section className="bg-[#172b3d] px-6 py-16 text-white">
         <div className="mx-auto max-w-7xl">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-300">
-            Vehículos de carga
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber-400">
+            Andina Motor · Vehículos de carga
           </p>
 
           <h1 className="mt-3 max-w-3xl text-4xl font-extrabold leading-tight sm:text-5xl">
-            Motocargueros para tu trabajo
+            Motocargueros para cada jornada.
           </h1>
 
           <p className="mt-5 max-w-2xl text-base leading-7 text-gray-300 sm:text-lg">
@@ -134,7 +134,7 @@ export default async function MotocarguerosPage({
           {/* RESULTADOS */}
           {formattedMotocargueros.length === 0 ? (
             <div className="rounded-2xl border border-dashed border-gray-300 bg-white px-6 py-16 text-center">
-              <div className="text-6xl">🚚</div>
+              <div className="text-6xl text-amber-700">AM</div>
 
               <h3 className="mt-5 text-xl font-bold text-gray-900">
                 No encontramos motocargueros

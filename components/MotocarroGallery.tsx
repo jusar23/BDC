@@ -29,10 +29,8 @@ return (
 <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm">
 <div className="flex min-h-[400px] items-center justify-center bg-gray-100 sm:min-h-[500px]">
 <div className="flex flex-col items-center text-center">
-<div className="text-8xl">🚚</div>
-
-        <p className="mt-5 text-sm font-medium text-gray-400">
-          Imagen del modelo próximamente
+<p className="text-sm font-medium text-slate-500">
+          Imágenes no disponibles para {name}
         </p>
       </div>
     </div>
