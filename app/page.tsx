@@ -10,7 +10,16 @@ export default async function Home() {
   const [products, motocarros, motos] = await Promise.all([
     prisma.product.findMany({ orderBy: { createdAt: "desc" }, take: 4 }),
     prisma.motocarro.findMany({ orderBy: [{ brand: "asc" }, { model: "asc" }], take: 4 }),
-    prisma.moto.findMany({ orderBy: { model: "asc" }, take: 4 }),
+    prisma.moto.findMany({
+      orderBy: { model: "asc" },
+      take: 4,
+      include: {
+        images: {
+          orderBy: [{ position: "asc" }, { id: "asc" }],
+          take: 1,
+        },
+      },
+    }),
   ]);
 
   const formattedProducts = products.map((product) => ({
@@ -25,6 +34,7 @@ export default async function Home() {
   }));
   const formattedMotos = motos.map((item) => ({
     ...item,
+    image: item.image ?? item.images[0]?.url ?? null,
     displacement: item.displacement === null ? null : Number(item.displacement),
     horsepower: item.horsepower === null ? null : Number(item.horsepower),
   }));

@@ -2,9 +2,18 @@ import { prisma } from "@/lib/prisma";
 import MotoCard from "@/components/MotoCard";
 
 export default async function MotosPage() {
-  const motos = await prisma.moto.findMany({ orderBy: { model: "asc" } });
+  const motos = await prisma.moto.findMany({
+    orderBy: { model: "asc" },
+    include: {
+      images: {
+        orderBy: [{ position: "asc" }, { id: "asc" }],
+        take: 1,
+      },
+    },
+  });
   const formattedMotos = motos.map((moto) => ({
     ...moto,
+    image: moto.image ?? moto.images[0]?.url ?? null,
     displacement: moto.displacement === null ? null : Number(moto.displacement),
     horsepower: moto.horsepower === null ? null : Number(moto.horsepower),
   }));
