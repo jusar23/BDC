@@ -248,7 +248,7 @@ export default function SearchBar() {
 
         <button
           type="submit"
-          className="rounded-r-xl bg-[#314b5d] px-5 text-sm font-semibold text-white transition hover:bg-[#243f55]"
+          className="rounded-r-xl bg-[#172b3d] px-5 text-sm font-semibold text-white transition hover:bg-[#243f55]"
         >
           Buscar
         </button>
@@ -359,7 +359,7 @@ export default function SearchBar() {
               <button
                 type="button"
                 onClick={search}
-                className="mt-4 rounded-xl bg-[#314b5d] px-4 py-2 text-xs font-semibold text-white hover:bg-[#243f55]"
+                className="mt-4 rounded-xl bg-[#172b3d] px-4 py-2 text-xs font-semibold text-white hover:bg-[#243f55]"
               >
                 Buscar "{value.trim()}"
               </button>
