@@ -33,11 +33,14 @@ Configura estas variables en el entorno local y en Vercel:
 
 - `NEXT_PUBLIC_SUPABASE_URL`: URL del proyecto.
 - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`: clave pública del proyecto. El código también reconoce `NEXT_PUBLIC_SUPABASE_ANON_KEY` para proyectos que aún usan el nombre anterior.
+- `SUPABASE_SECRET_KEY`: clave privada para que el servidor del CRM cree cuentas de Supabase Auth. También se acepta `SUPABASE_SERVICE_ROLE_KEY` para claves anteriores.
 - `DATABASE_URL` y `DIRECT_URL`: conexiones PostgreSQL ya usadas por Prisma para consultar el catálogo y verificar el permiso de cada usuario.
 
-En Vercel, se agregan en **Project → Settings → Environment Variables** y se vuelve a desplegar el proyecto. No incluyas claves `service_role` o secretas en variables `NEXT_PUBLIC_`.
+En Vercel, se agregan en **Project → Settings → Environment Variables** y se vuelve a desplegar el proyecto. La clave `SUPABASE_SECRET_KEY` es privada: nunca la pongas en una variable `NEXT_PUBLIC_`, en el código fuente o en el navegador.
 
 Las páginas y operaciones del CRM verifican la sesión de Supabase y el permiso guardado en `crm_users` en el servidor. Nunca configures una clave `service_role` en el navegador.
+
+Una vez habilitada la primera cuenta `ADMIN`, los administradores pueden crear usuarios y configurar permisos desde **CRM → Usuarios y permisos**. Esas altas usan Supabase Auth desde el servidor. La clave administrativa (`SUPABASE_SECRET_KEY`) solo vive en el entorno privado de Vercel; no se expone al navegador. Desactivar un usuario en el CRM revoca su acceso al panel sin borrar la cuenta de Auth.
 
 ## Catálogo
 

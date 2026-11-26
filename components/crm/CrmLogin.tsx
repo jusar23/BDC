@@ -8,8 +8,12 @@ export default function CrmLogin({ configured }: { configured: boolean }) {
     event.preventDefault(); setBusy(true); setError("");
     try {
       const response = await fetch("/api/crm/auth", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email, password }) });
-      const result = await response.json();
-      if (!response.ok) throw new Error(result.error || "No se pudo iniciar sesión.");
+      const responseText = await response.text();
+      let result: { error?: string; ok?: boolean } = {};
+      try { result = JSON.parse(responseText) as typeof result; } catch { /* El servicio puede devolver un error vacío o una página HTML. */ }
+      if (!response.ok || !result.ok) {
+        throw new Error(result.error || "El servicio del CRM no respondió correctamente. Revisa la configuración de Supabase Auth y que la tabla crm_users esté creada.");
+      }
       window.location.href = "/crm";
     } catch (cause) { setError(cause instanceof Error ? cause.message : "No se pudo iniciar sesión."); setBusy(false); }
   }

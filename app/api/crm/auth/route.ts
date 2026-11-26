@@ -12,16 +12,29 @@ export async function POST(request: Request) {
   const password = typeof body.password === "string" ? body.password : "";
   if (!email || !password) return NextResponse.json({ error: "Escribe tu correo y contraseña." }, { status: 400 });
 
-  const supabase = await createSupabaseServerClient();
-  const { data, error } = await supabase.auth.signInWithPassword({ email, password });
-  if (error || !data.user) return NextResponse.json({ error: "Correo o contraseña incorrectos." }, { status: 401 });
+  let supabase;
+  try {
+    supabase = await createSupabaseServerClient();
+    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+    if (error || !data.user) return NextResponse.json({ error: "Correo o contraseña incorrectos." }, { status: 401 });
 
-  const access = await prisma.crmUser.findUnique({ where: { id: data.user.id } });
-  if (!access || !access.active || access.email.toLowerCase() !== email) {
-    await supabase.auth.signOut();
-    return NextResponse.json({ error: "Tu cuenta todavía no tiene acceso al CRM. Solicítale al administrador que la habilite en Supabase." }, { status: 403 });
+    let access;
+    try {
+      access = await prisma.crmUser.findUnique({ where: { id: data.user.id } });
+    } catch (error) {
+      await supabase.auth.signOut();
+      console.error("No se pudo consultar crm_users:", error);
+      return NextResponse.json({ error: "La tabla de permisos crm_users todavía no está disponible en Supabase." }, { status: 503 });
+    }
+    if (!access || !access.active || access.email.toLowerCase() !== email) {
+      await supabase.auth.signOut();
+      return NextResponse.json({ error: "Tu cuenta todavía no tiene acceso al CRM. Habilítala en la tabla crm_users de Supabase." }, { status: 403 });
+    }
+    return NextResponse.json({ ok: true });
+  } catch (error) {
+    console.error("No se pudo iniciar la sesión del CRM:", error);
+    return NextResponse.json({ error: "No se pudo conectar con Supabase Auth. Verifica las variables del proyecto en Vercel." }, { status: 503 });
   }
-  return NextResponse.json({ ok: true });
 }
 
 export async function DELETE() {
