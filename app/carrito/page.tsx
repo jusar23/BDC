@@ -339,12 +339,12 @@ export default function CarritoPage() {
 
               </div>
 
-              <button
-                type="button"
-                className="mt-6 w-full rounded-xl bg-amber-500 px-5 py-4 text-sm font-bold text-slate-950 transition hover:bg-amber-400"
+              <Link
+                href="/checkout"
+                className="mt-6 block w-full rounded-xl bg-amber-500 px-5 py-4 text-center text-sm font-bold text-slate-950 transition hover:bg-amber-400"
               >
                 Continuar con el pedido
-              </button>
+              </Link>
 
               <Link
                 href="/repuestos"

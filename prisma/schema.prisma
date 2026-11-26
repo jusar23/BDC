@@ -8,6 +8,49 @@ datasource db {
   directUrl = env("DIRECT_URL")
 }
 
+enum OrderStatus {
+  PENDING_PAYMENT
+  PAID
+  PAYMENT_FAILED
+}
+
+model Order {
+  id                 String      @id @default(cuid())
+  reference          String      @unique
+  status             OrderStatus @default(PENDING_PAYMENT)
+  paymentProvider    String      @default("wompi")
+  transactionId      String?     @unique
+  customerName       String
+  customerEmail      String
+  customerPhone      String
+  shippingAddress    String
+  shippingCity       String
+  shippingRegion     String
+  currency           String      @default("COP")
+  subtotalInCents    Int
+  shippingInCents    Int         @default(0)
+  totalInCents       Int
+  createdAt          DateTime    @default(now())
+  updatedAt          DateTime    @updatedAt
+  items              OrderItem[]
+
+  @@index([status, createdAt])
+}
+
+model OrderItem {
+  id                  String   @id @default(cuid())
+  orderId             String
+  productId           Int
+  productName         String
+  productSlug         String
+  productReference    String
+  unitPriceInCents    Int
+  quantity            Int
+  order               Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@index([orderId])
+}
+
 model Product {
   id          Int            @id @default(autoincrement())
   name        String
