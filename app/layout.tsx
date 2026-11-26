@@ -22,13 +22,13 @@ export default function RootLayout({
         <CartProvider>
         <div className="flex min-h-screen flex-col">
 
-          <Navbar />
+          <div data-store-chrome="header"><Navbar /></div>
 
           <main className="flex-1">
             {children}
           </main>
 
-          <Footer />
+          <div data-store-chrome="footer"><Footer /></div>
 
         </div>
         </CartProvider>

@@ -14,6 +14,26 @@ enum OrderStatus {
   PAYMENT_FAILED
 }
 
+enum CrmRole {
+  ADMIN
+  EMPLOYEE
+}
+
+model CrmUser {
+  id                String   @id @db.Uuid
+  email             String   @unique
+  fullName          String?  @map("full_name")
+  role              CrmRole  @default(EMPLOYEE)
+  canManageCatalog  Boolean  @default(false) @map("can_manage_catalog")
+  canManageOrders   Boolean  @default(false) @map("can_manage_orders")
+  canManageChats    Boolean  @default(false) @map("can_manage_chats")
+  active            Boolean  @default(true)
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+
+  @@map("crm_users")
+}
+
 model Order {
   id                 String      @id @default(cuid())
   reference          String      @unique
