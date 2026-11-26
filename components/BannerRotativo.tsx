@@ -3,7 +3,14 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const banners = [
+type BannerRotativoProps = {
+  firstMotoImage: string;
+  motocarroImage: string;
+  motoImage: string;
+};
+
+function getBanners({ firstMotoImage, motocarroImage, motoImage }: BannerRotativoProps) {
+  return [
   {
     id: 1,
     eyebrow: "ANDINA MOTOR · REPUESTOS",
@@ -11,7 +18,7 @@ const banners = [
     description: "Consulta nuestro catálogo de componentes para motocicletas y vehículos de trabajo.",
     buttonText: "Explorar repuestos",
     buttonHref: "/repuestos",
-    image: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1800&q=85",
+    image: firstMotoImage,
   },
   {
     id: 2,
@@ -20,7 +27,7 @@ const banners = [
     description: "Conoce los motocargueros disponibles y revisa sus características.",
     buttonText: "Ver motocargueros",
     buttonHref: "/motocargueros",
-    image: "https://images.unsplash.com/photo-1558981285-6f0c94958bb6?auto=format&fit=crop&w=1800&q=85",
+    image: motocarroImage,
   },
   {
     id: 3,
@@ -29,13 +36,15 @@ const banners = [
     description: "Compara la información disponible y encuentra una opción para tu día a día.",
     buttonText: "Ver motocicletas",
     buttonHref: "/motos",
-    image: "https://images.unsplash.com/photo-1558980664-10ea9d8e4d8a?auto=format&fit=crop&w=1800&q=85",
+    image: motoImage,
   },
-];
+  ];
+}
 
-export default function BannerRotativo() {
+export default function BannerRotativo(props: BannerRotativoProps) {
   const [current, setCurrent] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const banners = getBanners(props);
   const activeBanner = banners[current];
 
   function nextBanner() {

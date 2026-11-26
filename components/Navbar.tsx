@@ -125,7 +125,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => setCartOpen(true)}
-              className="relative hidden h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-white text-xl shadow-sm transition active:scale-95 hover:border-blue-200 hover:bg-blue-50 hover:text-blue-600 md:flex md:w-auto md:px-4"
+              className="relative hidden h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-white text-xl shadow-sm transition active:scale-95 hover:border-[#c5d0c8] hover:bg-[#f2f5f2] hover:text-[#314b5d] md:flex md:w-auto md:px-4"
               aria-label={`Abrir carrito. ${totalItems} ${
                 totalItems === 1
                   ? "producto"
@@ -153,7 +153,7 @@ export default function Navbar() {
 
             <Link
               href="/carrito"
-              className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-white text-xl shadow-sm transition active:scale-95 hover:border-blue-200 hover:bg-blue-50 hover:text-blue-600 md:hidden"
+              className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-white text-xl shadow-sm transition active:scale-95 hover:border-[#c5d0c8] hover:bg-[#f2f5f2] hover:text-[#314b5d] md:hidden"
               aria-label={`Abrir carrito. ${totalItems} ${
                 totalItems === 1
                   ? "producto"
@@ -218,7 +218,7 @@ export default function Navbar() {
                 onClick={closeMenu}
                 className="flex items-center gap-3 rounded-xl px-3 py-3.5 text-sm font-semibold text-gray-700 transition active:bg-gray-100 hover:bg-gray-50"
               >
-                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-50 text-lg">
+                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#f2f5f2] text-lg">
                   🏠
                 </span>
 
@@ -235,7 +235,7 @@ export default function Navbar() {
                 onClick={closeMenu}
                 className="flex items-center gap-3 rounded-xl px-3 py-3.5 text-sm font-semibold text-gray-700 transition active:bg-gray-100 hover:bg-gray-50"
               >
-                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-50 text-lg">
+                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#f2f5f2] text-lg">
                   🔧
                 </span>
 
@@ -252,7 +252,7 @@ export default function Navbar() {
                 onClick={closeMenu}
                 className="flex items-center gap-3 rounded-xl px-3 py-3.5 text-sm font-semibold text-gray-700 transition active:bg-gray-100 hover:bg-gray-50"
               >
-                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-50 text-lg">
+                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#f2f5f2] text-lg">
                   🚚
                 </span>
 
@@ -269,7 +269,7 @@ export default function Navbar() {
                 onClick={closeMenu}
                 className="flex items-center gap-3 rounded-xl px-3 py-3.5 text-sm font-semibold text-gray-700 transition active:bg-gray-100 hover:bg-gray-50"
               >
-                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-50 text-lg">
+                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#f2f5f2] text-lg">
                   🏍️
                 </span>
 

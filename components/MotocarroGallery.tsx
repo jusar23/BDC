@@ -72,8 +72,8 @@ className="h-full max-h-[550px] w-full object-contain"
           onClick={() => setSelectedIndex(index)}
           className={`relative aspect-square overflow-hidden rounded-xl border-2 bg-white transition ${
             selectedIndex === index
-              ? "border-blue-600 ring-2 ring-blue-100"
-              : "border-gray-200 hover:border-blue-400"
+              ? "border-[#526b5d] ring-2 ring-[#e1e8e3]"
+              : "border-gray-200 hover:border-[#a8b6ad]"
           }`}
         >
           <img
@@ -98,7 +98,7 @@ className="h-full max-h-[550px] w-full object-contain"
               : current - 1
           )
         }
-        className="flex-1 rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm font-semibold text-gray-700 transition hover:border-blue-400 hover:text-blue-600"
+        className="flex-1 rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm font-semibold text-gray-700 transition hover:border-[#a8b6ad] hover:text-[#314b5d]"
       >
         ← Anterior
       </button>
@@ -112,7 +112,7 @@ className="h-full max-h-[550px] w-full object-contain"
               : current + 1
           )
         }
-        className="flex-1 rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm font-semibold text-gray-700 transition hover:border-blue-400 hover:text-blue-600"
+        className="flex-1 rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm font-semibold text-gray-700 transition hover:border-[#a8b6ad] hover:text-[#314b5d]"
       >
         Siguiente →
       </button>

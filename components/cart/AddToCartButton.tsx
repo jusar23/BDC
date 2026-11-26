@@ -56,7 +56,7 @@ export default function AddToCartButton({
           unavailable ||
           quantity >= product.stock
         }
-        className="w-full rounded-xl bg-blue-600 px-6 py-4 text-center text-sm font-bold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:bg-gray-300"
+        className="w-full rounded-xl bg-[#314b5d] px-6 py-4 text-center text-sm font-bold text-white transition hover:bg-[#243f55] disabled:cursor-not-allowed disabled:bg-gray-300"
       >
         {unavailable
           ? "Producto agotado"

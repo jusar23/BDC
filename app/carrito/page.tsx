@@ -51,7 +51,7 @@ export default function CarritoPage() {
 
             <Link
               href="/repuestos"
-              className="mt-7 inline-flex rounded-xl bg-blue-600 px-6 py-3 text-sm font-bold text-white transition hover:bg-blue-700"
+              className="mt-7 inline-flex rounded-xl bg-[#314b5d] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#243f55]"
             >
               Ver repuestos
             </Link>
@@ -341,14 +341,14 @@ export default function CarritoPage() {
 
               <button
                 type="button"
-                className="mt-6 w-full rounded-xl bg-blue-600 px-5 py-4 text-sm font-bold text-white transition hover:bg-blue-700"
+                className="mt-6 w-full rounded-xl bg-[#314b5d] px-5 py-4 text-sm font-bold text-white transition hover:bg-[#243f55]"
               >
                 Continuar con el pedido
               </button>
 
               <Link
                 href="/repuestos"
-                className="mt-3 block text-center text-sm font-semibold text-blue-600 hover:text-blue-700"
+                className="mt-3 block text-center text-sm font-semibold text-[#415b68] hover:text-[#314b5d]"
               >
                 Seguir comprando
               </Link>

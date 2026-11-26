@@ -148,7 +148,7 @@ return ( <section className="bg-gray-50 px-6 py-14"> <div className="mx-auto max
     <div className="mt-8 sm:hidden">
       <Link
         href="/#productos"
-        className="block rounded-xl bg-blue-600 px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-blue-700"
+        className="block rounded-xl bg-[#314b5d] px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-[#243f55]"
       >
         Ver todos los repuestos →
       </Link>

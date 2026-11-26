@@ -233,7 +233,7 @@ export default function SearchBar() {
             onKeyDown={handleKeyDown}
             placeholder="Buscar por nombre, referencia o marca..."
             autoComplete="off"
-            className="h-12 w-full rounded-l-xl border border-gray-300 bg-white pl-12 pr-10 text-sm text-black placeholder:text-gray-500 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+            className="h-12 w-full rounded-l-xl border border-gray-300 bg-white pl-12 pr-10 text-sm text-black placeholder:text-gray-500 outline-none transition focus:border-[#647b6d] focus:ring-2 focus:ring-[#e1e8e3]"
           />
 
           {loading && (
@@ -248,7 +248,7 @@ export default function SearchBar() {
 
         <button
           type="submit"
-          className="rounded-r-xl bg-blue-600 px-5 text-sm font-semibold text-white transition hover:bg-blue-700"
+          className="rounded-r-xl bg-[#314b5d] px-5 text-sm font-semibold text-white transition hover:bg-[#243f55]"
         >
           Buscar
         </button>
@@ -334,7 +334,7 @@ export default function SearchBar() {
               <button
                 type="button"
                 onClick={search}
-                className="w-full border-t border-gray-100 bg-gray-50 px-4 py-3 text-sm font-semibold text-blue-600 hover:bg-blue-50"
+                className="w-full border-t border-gray-100 bg-gray-50 px-4 py-3 text-sm font-semibold text-[#415b68] hover:bg-[#f2f5f2]"
               >
                 Ver todos los resultados para "
                 {value.trim()}"
@@ -359,7 +359,7 @@ export default function SearchBar() {
               <button
                 type="button"
                 onClick={search}
-                className="mt-4 rounded-xl bg-blue-600 px-4 py-2 text-xs font-semibold text-white hover:bg-blue-700"
+                className="mt-4 rounded-xl bg-[#314b5d] px-4 py-2 text-xs font-semibold text-white hover:bg-[#243f55]"
               >
                 Buscar "{value.trim()}"
               </button>

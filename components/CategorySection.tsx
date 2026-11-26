@@ -64,7 +64,7 @@ export default function CategorySection() {
         <div className="mt-5 sm:hidden">
           <Link
             href="/repuestos"
-            className="block rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-center text-sm font-semibold text-blue-600"
+            className="block rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-center text-sm font-semibold text-[#415b68]"
           >
             Ver todos los repuestos →
           </Link>

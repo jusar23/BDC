@@ -39,9 +39,15 @@ export default async function Home() {
     horsepower: item.horsepower === null ? null : Number(item.horsepower),
   }));
 
+  const bannerImages = {
+    firstMotoImage: formattedMotos[0]?.image ?? formattedMotocarros[0]?.image ?? "",
+    motocarroImage: formattedMotocarros[0]?.image ?? formattedMotos[0]?.image ?? "",
+    motoImage: formattedMotos[1]?.image ?? formattedMotos[0]?.image ?? formattedMotocarros[0]?.image ?? "",
+  };
+
   return (
     <main className="min-h-screen bg-white text-slate-900">
-      <BannerRotativo />
+      <BannerRotativo {...bannerImages} />
 
       <section className="border-b border-slate-200 bg-slate-50">
         <div className="mx-auto grid max-w-7xl grid-cols-1 divide-y divide-slate-200 px-6 py-5 sm:grid-cols-3 sm:divide-x sm:divide-y-0 lg:px-8">

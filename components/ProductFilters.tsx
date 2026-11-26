@@ -39,7 +39,7 @@ export default function ProductFilters({
 
         <button
           onClick={onClear}
-          className="text-xs font-medium text-blue-600 hover:underline"
+          className="text-xs font-medium text-[#415b68] hover:underline"
         >
           Limpiar
         </button>
@@ -60,7 +60,7 @@ export default function ProductFilters({
               onSearchChange(e.target.value)
             }
             placeholder="Nombre, referencia o marca..."
-            className="w-full rounded-xl border border-gray-300 bg-white px-3 py-3 text-sm text-black outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+            className="w-full rounded-xl border border-gray-300 bg-white px-3 py-3 text-sm text-black outline-none focus:border-[#647b6d] focus:ring-2 focus:ring-[#e1e8e3]"
           />
         </div>
 
@@ -75,7 +75,7 @@ export default function ProductFilters({
             onChange={(e) =>
               onCategoryChange(e.target.value)
             }
-            className="w-full rounded-xl border border-gray-300 bg-white px-3 py-3 text-sm text-black outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+            className="w-full rounded-xl border border-gray-300 bg-white px-3 py-3 text-sm text-black outline-none focus:border-[#647b6d] focus:ring-2 focus:ring-[#e1e8e3]"
           >
             <option value="">
               Todas las categorías
@@ -100,7 +100,7 @@ export default function ProductFilters({
             onChange={(e) =>
               onBrandChange(e.target.value)
             }
-            className="w-full rounded-xl border border-gray-300 bg-white px-3 py-3 text-sm text-black outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+            className="w-full rounded-xl border border-gray-300 bg-white px-3 py-3 text-sm text-black outline-none focus:border-[#647b6d] focus:ring-2 focus:ring-[#e1e8e3]"
           >
             <option value="">
               Todas las marcas
@@ -125,7 +125,7 @@ export default function ProductFilters({
             onChange={(e) =>
               onSortChange(e.target.value)
             }
-            className="w-full rounded-xl border border-gray-300 bg-white px-3 py-3 text-sm text-black outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+            className="w-full rounded-xl border border-gray-300 bg-white px-3 py-3 text-sm text-black outline-none focus:border-[#647b6d] focus:ring-2 focus:ring-[#e1e8e3]"
           >
             <option value="">
               Más recientes
