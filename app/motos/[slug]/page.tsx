@@ -240,7 +240,7 @@ export default async function MotoDetailPage({
 
             <Link
               href="#contacto"
-              className="mt-8 block rounded-xl bg-white px-6 py-4 text-center font-bold text-[#314b5d] transition hover:bg-[#eef2ee]"
+              className="mt-8 block rounded-xl bg-amber-500 px-6 py-4 text-center font-bold text-slate-950 transition hover:bg-amber-400"
             >
               Contactar a un asesor
             </Link>

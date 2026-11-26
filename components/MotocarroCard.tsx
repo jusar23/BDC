@@ -124,7 +124,7 @@ export default function MotocarroCard({
 
         <Link
           href={`/motocargueros/${motocarro.slug}`}
-          className="mt-5 block rounded-md bg-[#172b3d] px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-[#243f55]"
+          className="mt-5 block rounded-md bg-amber-500 px-4 py-3 text-center text-sm font-semibold text-slate-950 transition hover:bg-amber-400"
         >
           Ver ficha técnica
         </Link>

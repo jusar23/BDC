@@ -98,7 +98,7 @@ export default function PromotionsCarousel() {
 
             <div className="relative flex min-h-[360px] items-center px-8 py-12 sm:min-h-[400px] sm:px-12 lg:px-16">
               <div className="max-w-xl text-white">
-                <span className="inline-flex rounded-full bg-[#314b5d] px-4 py-2 text-xs font-bold uppercase tracking-wider">
+                <span className="inline-flex rounded-full bg-amber-500 px-4 py-2 text-xs font-bold uppercase tracking-wider text-slate-950">
                   {promotion.badge}
                 </span>
 

@@ -296,7 +296,7 @@ export default function ProductCatalog({
 
             <button
               onClick={clearFilters}
-              className="mt-6 inline-flex rounded-xl bg-[#314b5d] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#243f55]"
+              className="mt-6 inline-flex rounded-xl bg-amber-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-amber-400"
             >
               Ver todos los repuestos
             </button>

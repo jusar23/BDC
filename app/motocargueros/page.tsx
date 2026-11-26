@@ -105,7 +105,7 @@ export default async function MotocarguerosPage({
                 href="/motocargueros"
                 className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
                   !selectedBrand
-                    ? "bg-[#314b5d] text-white"
+                    ? "bg-amber-500 text-slate-950"
                     : "border border-gray-200 bg-white text-gray-700 hover:border-[#a8b6ad] hover:text-[#314b5d]"
                 }`}
               >
@@ -121,7 +121,7 @@ export default async function MotocarguerosPage({
                   className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
                     selectedBrand.toLowerCase() ===
                     item.brand.toLowerCase()
-                      ? "bg-[#314b5d] text-white"
+                      ? "bg-amber-500 text-slate-950"
                       : "border border-gray-200 bg-white text-gray-700 hover:border-[#a8b6ad] hover:text-[#314b5d]"
                   }`}
                 >
@@ -147,7 +147,7 @@ export default async function MotocarguerosPage({
 
               <Link
                 href="/motocargueros"
-                className="mt-6 inline-flex rounded-xl bg-[#314b5d] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#243f55]"
+                className="mt-6 inline-flex rounded-xl bg-amber-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-amber-400"
               >
                 Ver todos los modelos
               </Link>

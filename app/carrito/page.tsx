@@ -51,7 +51,7 @@ export default function CarritoPage() {
 
             <Link
               href="/repuestos"
-              className="mt-7 inline-flex rounded-xl bg-[#314b5d] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#243f55]"
+              className="mt-7 inline-flex rounded-xl bg-amber-500 px-6 py-3 text-sm font-bold text-slate-950 transition hover:bg-amber-400"
             >
               Ver repuestos
             </Link>
@@ -341,7 +341,7 @@ export default function CarritoPage() {
 
               <button
                 type="button"
-                className="mt-6 w-full rounded-xl bg-[#314b5d] px-5 py-4 text-sm font-bold text-white transition hover:bg-[#243f55]"
+                className="mt-6 w-full rounded-xl bg-amber-500 px-5 py-4 text-sm font-bold text-slate-950 transition hover:bg-amber-400"
               >
                 Continuar con el pedido
               </button>

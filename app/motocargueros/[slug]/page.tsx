@@ -188,7 +188,7 @@ export default async function MotocarroDetailPage({
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Link
                   href="/#contacto"
-                  className="flex-1 rounded-xl bg-[#314b5d] px-6 py-4 text-center text-sm font-bold text-white transition hover:bg-[#243f55]"
+                  className="flex-1 rounded-xl bg-amber-500 px-6 py-4 text-center text-sm font-bold text-slate-950 transition hover:bg-amber-400"
                 >
                   Consultar este modelo
                 </Link>

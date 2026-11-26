@@ -60,7 +60,7 @@ export default function SobreNosotrosPage() {
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber-700">Andina Motor</p>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">Encuentra lo que buscas en nuestro catálogo.</h2>
         </div>
-        <Link href="/repuestos" className="inline-flex w-fit rounded-md bg-[#172b3d] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#243f55]">Ver productos</Link>
+        <Link href="/repuestos" className="inline-flex w-fit rounded-md bg-amber-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-amber-400">Ver productos</Link>
       </section>
     </main>
   );

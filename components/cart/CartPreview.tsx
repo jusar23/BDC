@@ -105,7 +105,7 @@ export default function CartPreview({
               <Link
                 href="/repuestos"
                 onClick={onClose}
-                className="mt-6 rounded-xl bg-[#314b5d] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#243f55]"
+                className="mt-6 rounded-xl bg-amber-500 px-5 py-3 text-sm font-bold text-slate-950 transition hover:bg-amber-400"
               >
                 Ver repuestos
               </Link>
@@ -281,7 +281,7 @@ export default function CartPreview({
             <Link
               href="/carrito"
               onClick={onClose}
-              className="mt-4 block w-full rounded-xl bg-[#314b5d] px-5 py-3.5 text-center text-sm font-bold text-white transition hover:bg-[#243f55]"
+              className="mt-4 block w-full rounded-xl bg-amber-500 px-5 py-3.5 text-center text-sm font-bold text-slate-950 transition hover:bg-amber-400"
             >
               Ver carrito completo
             </Link>

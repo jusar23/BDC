@@ -72,7 +72,7 @@ className="h-full max-h-[550px] w-full object-contain"
           onClick={() => setSelectedIndex(index)}
           className={`relative aspect-square overflow-hidden rounded-xl border-2 bg-white transition ${
             selectedIndex === index
-              ? "border-[#526b5d] ring-2 ring-[#e1e8e3]"
+              ? "border-amber-500 ring-2 ring-amber-100"
               : "border-gray-200 hover:border-[#a8b6ad]"
           }`}
         >

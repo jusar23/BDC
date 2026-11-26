@@ -124,7 +124,7 @@ export default function MotoCard({ moto }: { moto: Moto }) {
 
         <Link
           href={`/motos/${moto.slug}#contacto`}
-          className="mt-3 block rounded-md bg-[#172b3d] px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-[#243f55]"
+          className="mt-3 block rounded-md bg-amber-500 px-4 py-3 text-center text-sm font-semibold text-slate-950 transition hover:bg-amber-400"
         >
           Contactar a un asesor
         </Link>
